@@ -55,7 +55,7 @@
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="comment" class="form-label">Comments</label>
-                        <textarea name="review[comment]" id="comment" cols="38" rows="5" class="form-controle" required></textarea>
+                        <textarea name="review[comment]" id="comment" cols="5" rows="5" class="form-controle" required></textarea>
                         <div class="invalid-feedback"> please add some review or comment</div>
                     </div>
                     <button class="btn btn-outline-dark">submit</button>
@@ -67,9 +67,9 @@
                     <p><b> All Reviews </b></p>
                     <% for(review of listing.reviews){ %>
                         <div class="card col-5 ms-3 mb-3">
-                            <div class="card-body">
+                            <div class="card-body reviewbody">
                                 <h5 class="card-title">@<%= review.author.username %></h5>
-                                <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
+                                <p  data-rating="<%= review.rating %>"></p>
                                   </p>
                                 <p class="card-text"><%= review.comment %></p>
                             </div>
